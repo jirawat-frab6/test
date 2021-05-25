@@ -111,17 +111,6 @@ Wire Wire Line
 	4050 4150 4050 3900
 Connection ~ 4050 4150
 $Comp
-L Driver_Motor:L298HN U2
-U 1 1 60AA45B4
-P 2000 1950
-F 0 "U2" H 1500 2800 50  0000 C CNN
-F 1 "L298HN" H 1600 2700 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-15_P2.54x2.54mm_StaggerOdd_Lead4.58mm_Vertical" H 2050 1300 50  0001 L CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf" H 2150 2200 50  0001 C CNN
-	1    2000 1950
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+12V #PWR0108
 U 1 1 60AA672B
 P 2100 1250
@@ -134,10 +123,6 @@ F 3 "" H 2100 1250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1400 1450 850  1450
-Wire Wire Line
-	1400 1550 850  1550
-Wire Wire Line
-	1400 1650 850  1650
 $Comp
 L power:GND #PWR0106
 U 1 1 60AA82E9
@@ -157,8 +142,6 @@ Text Label 850  1650 0    50   ~ 0
 motro_pwm
 Text Notes 3850 4650 0    50   ~ 0
 *enc_a,enc_b to nucleo
-Text Notes 1550 3000 0    50   ~ 0
-*motor_ina,motor_inb,motor_pwm from nucleo\n
 Text Notes 3600 3550 0    98   ~ 0
 ENCODER
 Text Notes 850  900  0    98   ~ 0
@@ -230,39 +213,6 @@ F 3 "" H 2000 1250 50  0001 C CNN
 	1    2000 1250
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+12V #PWR0109
-U 1 1 60ACAF17
-P 2100 3900
-F 0 "#PWR0109" H 2100 3750 50  0001 C CNN
-F 1 "+12V" V 2100 4100 50  0000 C CNN
-F 2 "" H 2100 3900 50  0001 C CNN
-F 3 "" H 2100 3900 50  0001 C CNN
-	1    2100 3900
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J3
-U 1 1 60AC923C
-P 1900 3900
-F 0 "J3" H 1980 3892 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 1980 3801 50  0000 L CNN
-F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal" H 1900 3900 50  0001 C CNN
-F 3 "~" H 1900 3900 50  0001 C CNN
-	1    1900 3900
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0110
-U 1 1 60ACB4F5
-P 2100 3800
-F 0 "#PWR0110" H 2100 3550 50  0001 C CNN
-F 1 "GND" H 2105 3627 50  0000 C CNN
-F 2 "" H 2100 3800 50  0001 C CNN
-F 3 "" H 2100 3800 50  0001 C CNN
-	1    2100 3800
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	9550 2450 9600 2450
 $Comp
@@ -275,17 +225,6 @@ F 2 "" H 9600 2450 50  0001 C CNN
 F 3 "" H 9600 2450 50  0001 C CNN
 	1    9600 2450
 	0    -1   -1   0   
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0103
-U 1 1 60B17C1E
-P 2100 3900
-F 0 "#FLG0103" H 2100 3975 50  0001 C CNN
-F 1 "PWR_FLAG" H 2100 4050 50  0000 C CNN
-F 2 "" H 2100 3900 50  0001 C CNN
-F 3 "~" H 2100 3900 50  0001 C CNN
-	1    2100 3900
-	-1   0    0    1   
 $EndComp
 $Comp
 L Diode:1N4007 D4
@@ -381,11 +320,6 @@ Wire Wire Line
 Connection ~ 2950 2250
 Wire Wire Line
 	2950 2250 3200 2250
-Wire Wire Line
-	1700 2650 1800 2650
-Connection ~ 1800 2650
-Wire Wire Line
-	1800 2650 1850 2650
 Connection ~ 1850 2650
 Wire Wire Line
 	1850 2650 2000 2650
@@ -400,17 +334,6 @@ F 1 "C 3.3uf" H 850 4500 50  0000 L CNN
 F 2 "" H 1288 4400 50  0001 C CNN
 F 3 "~" H 1250 4550 50  0001 C CNN
 	1    1250 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C3
-U 1 1 60AF1C2E
-P 1950 4550
-F 0 "C3" H 2065 4596 50  0000 L CNN
-F 1 "C 0.1uF" H 2065 4505 50  0000 L CNN
-F 2 "" H 1988 4400 50  0001 C CNN
-F 3 "~" H 1950 4550 50  0001 C CNN
-	1    1950 4550
 	1    0    0    -1  
 $EndComp
 Connection ~ 1250 4400
@@ -442,17 +365,6 @@ F 3 "" H 2650 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 60AFE751
-P 2200 4400
-F 0 "#FLG0101" H 2200 4475 50  0001 C CNN
-F 1 "PWR_FLAG" H 2200 4550 50  0000 C CNN
-F 2 "" H 2200 4400 50  0001 C CNN
-F 3 "~" H 2200 4400 50  0001 C CNN
-	1    2200 4400
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+12V #PWR0114
 U 1 1 60AEE412
 P 1200 4400
@@ -465,9 +377,6 @@ F 3 "" H 1200 4400 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	700  700  700  3050
-Wire Notes Line
-	700  3050 4200 3050
-Connection ~ 2100 3900
 $Comp
 L Device:LED D1
 U 1 1 60B12D64
@@ -479,9 +388,6 @@ F 3 "~" H 2450 4550 50  0001 C CNN
 	1    2450 4550
 	0    -1   -1   0   
 $EndComp
-Connection ~ 2450 4400
-Wire Wire Line
-	2450 4400 2650 4400
 Wire Wire Line
 	2450 4700 2350 4700
 $Comp
@@ -495,19 +401,6 @@ F 3 "~" H 2200 4700 50  0001 C CNN
 	1    2200 4700
 	0    -1   -1   0   
 $EndComp
-Connection ~ 2200 4400
-Wire Wire Line
-	2200 4400 2450 4400
-Wire Wire Line
-	1900 4400 1950 4400
-Wire Wire Line
-	1600 4700 1950 4700
-Connection ~ 1950 4400
-Wire Wire Line
-	1950 4400 2200 4400
-Connection ~ 1950 4700
-Wire Wire Line
-	1950 4700 2050 4700
 Wire Wire Line
 	1200 5350 1250 5350
 $Comp
@@ -561,17 +454,6 @@ F 3 "" H 1200 5350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 60B282C5
-P 2200 5350
-F 0 "#FLG0102" H 2200 5425 50  0001 C CNN
-F 1 "PWR_FLAG" H 2200 5500 50  0000 C CNN
-F 2 "" H 2200 5350 50  0001 C CNN
-F 3 "~" H 2200 5350 50  0001 C CNN
-	1    2200 5350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:LED D2
 U 1 1 60B282D1
 P 2450 5500
@@ -582,19 +464,10 @@ F 3 "~" H 2450 5500 50  0001 C CNN
 	1    2450 5500
 	0    -1   -1   0   
 $EndComp
-Connection ~ 2450 5350
-Wire Wire Line
-	2450 5350 2650 5350
-Connection ~ 2200 5350
-Wire Wire Line
-	2200 5350 2450 5350
 Wire Wire Line
 	1900 5350 1950 5350
 Wire Wire Line
 	1600 5650 1950 5650
-Connection ~ 1950 5350
-Wire Wire Line
-	1950 5350 2200 5350
 Connection ~ 1950 5650
 $Comp
 L Regulator_Linear:LP2950-3.3_TO92 U3
@@ -627,8 +500,6 @@ Wire Notes Line
 Wire Notes Line
 	700  3300 700  5900
 Wire Notes Line
-	3050 3300 700  3300
-Wire Notes Line
 	3050 5900 3050 3300
 $Comp
 L power:+12V #PWR0118
@@ -643,6 +514,98 @@ F 3 "" H 9600 2550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9550 2550 9600 2550
+Wire Wire Line
+	1800 2650 1850 2650
+Wire Wire Line
+	1400 1650 850  1650
+Wire Wire Line
+	1400 1550 850  1550
+Wire Notes Line
+	3050 3300 700  3300
+Wire Notes Line
+	700  3050 4200 3050
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 60B17C1E
+P 2100 3900
+F 0 "#FLG0103" H 2100 3975 50  0001 C CNN
+F 1 "PWR_FLAG" H 2100 4050 50  0000 C CNN
+F 2 "" H 2100 3900 50  0001 C CNN
+F 3 "~" H 2100 3900 50  0001 C CNN
+	1    2100 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 60ACB4F5
+P 2100 3800
+F 0 "#PWR0110" H 2100 3550 50  0001 C CNN
+F 1 "GND" H 2105 3627 50  0000 C CNN
+F 2 "" H 2100 3800 50  0001 C CNN
+F 3 "" H 2100 3800 50  0001 C CNN
+	1    2100 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 60AC923C
+P 1900 3900
+F 0 "J3" H 1980 3892 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 1980 3801 50  0000 L CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal" H 1900 3900 50  0001 C CNN
+F 3 "~" H 1900 3900 50  0001 C CNN
+	1    1900 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0109
+U 1 1 60ACAF17
+P 2100 3900
+F 0 "#PWR0109" H 2100 3750 50  0001 C CNN
+F 1 "+12V" V 2100 4100 50  0000 C CNN
+F 2 "" H 2100 3900 50  0001 C CNN
+F 3 "" H 2100 3900 50  0001 C CNN
+	1    2100 3900
+	0    1    1    0   
+$EndComp
+Text Notes 1550 3000 0    50   ~ 0
+*motor_ina,motor_inb,motor_pwm from nucleo\n
+$Comp
+L Driver_Motor:L298HN U2
+U 1 1 60AA45B4
+P 2000 1950
+F 0 "U2" H 1500 2800 50  0000 C CNN
+F 1 "L298HN" H 1600 2700 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-15_P2.54x2.54mm_StaggerOdd_Lead4.58mm_Vertical" H 2050 1300 50  0001 L CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf" H 2150 2200 50  0001 C CNN
+	1    2000 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2650 1800 2650
+Connection ~ 1800 2650
+Connection ~ 2450 4400
+Wire Wire Line
+	1950 4400 2450 4400
+Wire Wire Line
+	1600 4700 1950 4700
+Wire Wire Line
+	1950 4700 2050 4700
+Connection ~ 1950 4700
+$Comp
+L Device:C C3
+U 1 1 60AF1C2E
+P 1950 4550
+F 0 "C3" H 2065 4596 50  0000 L CNN
+F 1 "C 0.1uF" H 2065 4505 50  0000 L CNN
+F 2 "" H 1988 4400 50  0001 C CNN
+F 3 "~" H 1950 4550 50  0001 C CNN
+	1    1950 4550
+	1    0    0    -1  
+$EndComp
+Connection ~ 1950 4400
+Wire Wire Line
+	1900 4400 1950 4400
 $Comp
 L Regulator_Linear:LM7805_TO220 U1
 U 1 1 60B718FD
@@ -654,4 +617,25 @@ F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 1600 4350 50  0001 C CNN
 	1    1600 4400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2450 5350 2650 5350
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 60B942C1
+P 2100 3800
+F 0 "#FLG0104" H 2100 3875 50  0001 C CNN
+F 1 "PWR_FLAG" H 2100 3950 50  0000 C CNN
+F 2 "" H 2100 3800 50  0001 C CNN
+F 3 "~" H 2100 3800 50  0001 C CNN
+	1    2100 3800
+	1    0    0    -1  
+$EndComp
+Connection ~ 2100 3900
+Connection ~ 2100 3800
+Connection ~ 1950 5350
+Connection ~ 2450 5350
+Wire Wire Line
+	1950 5350 2450 5350
+Wire Wire Line
+	2450 4400 2650 4400
 $EndSCHEMATC
