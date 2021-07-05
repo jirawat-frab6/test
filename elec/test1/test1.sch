@@ -135,23 +135,17 @@ F 3 "" H 1850 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 850  1450 0    50   ~ 0
-motor_ina
+motor_pwm1
 Text Label 850  1550 0    50   ~ 0
-motor_inb
-Text Label 850  1650 0    50   ~ 0
-motro_pwm
+motor_pwm2
 Text Notes 3850 4650 0    50   ~ 0
 *enc_a,enc_b to nucleo
 Text Notes 3600 3550 0    98   ~ 0
 ENCODER
 Text Notes 850  900  0    98   ~ 0
 MOTOR DRIVER\n
-Text Label 10800 1450 0    50   ~ 0
-motor_ina
-Text Label 10300 1450 2    50   ~ 0
-motor_inb
 Text Label 10300 2050 2    50   ~ 0
-motro_pwm
+motor_pwm1
 Wire Notes Line
 	3350 3350 3350 4750
 Wire Notes Line
@@ -517,8 +511,6 @@ Wire Wire Line
 Wire Wire Line
 	1800 2650 1850 2650
 Wire Wire Line
-	1400 1650 850  1650
-Wire Wire Line
 	1400 1550 850  1550
 Wire Notes Line
 	3050 3300 700  3300
@@ -638,4 +630,110 @@ Wire Wire Line
 	1950 5350 2450 5350
 Wire Wire Line
 	2450 4400 2650 4400
+Text Label 10300 2150 2    50   ~ 0
+motor_pwm2
+$Comp
+L power:+5V #PWR0119
+U 1 1 60E31E2A
+P 1400 1650
+F 0 "#PWR0119" H 1400 1500 50  0001 C CNN
+F 1 "+5V" V 1415 1778 50  0000 L CNN
+F 2 "" H 1400 1650 50  0001 C CNN
+F 3 "" H 1400 1650 50  0001 C CNN
+	1    1400 1650
+	0    -1   -1   0   
+$EndComp
+Text Label 10300 2350 2    50   ~ 0
+limit_switch
+Text Label 10300 1550 2    50   ~ 0
+I2C_SCL
+Text Label 10300 1650 2    50   ~ 0
+I2C_SDA
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 60E366CD
+P 5900 1250
+F 0 "J4" H 5980 1242 50  0000 L CNN
+F 1 "Conn_01x04" H 5980 1151 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal" H 5900 1250 50  0001 C CNN
+F 3 "~" H 5900 1250 50  0001 C CNN
+	1    5900 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0120
+U 1 1 60E38079
+P 5700 1150
+F 0 "#PWR0120" H 5700 1000 50  0001 C CNN
+F 1 "+12V" V 5700 1350 50  0000 C CNN
+F 2 "" H 5700 1150 50  0001 C CNN
+F 3 "" H 5700 1150 50  0001 C CNN
+	1    5700 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 60E39E68
+P 5700 1450
+F 0 "#PWR0121" H 5700 1200 50  0001 C CNN
+F 1 "GND" H 5705 1277 50  0000 C CNN
+F 2 "" H 5700 1450 50  0001 C CNN
+F 3 "" H 5700 1450 50  0001 C CNN
+	1    5700 1450
+	0    1    1    0   
+$EndComp
+Text Label 5550 1250 2    50   ~ 0
+I2C_SCL
+Text Label 5550 1350 2    50   ~ 0
+I2C_SDA
+Wire Wire Line
+	5700 1250 5550 1250
+Wire Wire Line
+	5700 1350 5550 1350
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 60E43733
+P 5950 2700
+F 0 "J5" H 6030 2692 50  0000 L CNN
+F 1 "Conn_01x02" H 6030 2601 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal" H 5950 2700 50  0001 C CNN
+F 3 "~" H 5950 2700 50  0001 C CNN
+	1    5950 2700
+	1    0    0    -1  
+$EndComp
+Text Label 5600 2700 2    50   ~ 0
+limit_switch
+Wire Wire Line
+	5750 2700 5600 2700
+$Comp
+L power:GND #PWR0122
+U 1 1 60E47EFB
+P 5750 2800
+F 0 "#PWR0122" H 5750 2550 50  0001 C CNN
+F 1 "GND" H 5755 2627 50  0000 C CNN
+F 2 "" H 5750 2800 50  0001 C CNN
+F 3 "" H 5750 2800 50  0001 C CNN
+	1    5750 2800
+	0    1    1    0   
+$EndComp
+Text Notes 4800 950  0    98   ~ 0
+END EFFECTOR
+Text Notes 4750 2450 0    98   ~ 0
+LIMIT SWITCH\n
+Wire Notes Line
+	4650 1700 6600 1700
+Wire Notes Line
+	6600 1700 6600 700 
+Wire Notes Line
+	6600 700  4650 700 
+Wire Notes Line
+	4650 3150 6650 3150
+Wire Notes Line
+	6650 3150 6650 2050
+Wire Notes Line
+	6650 2050 4650 2050
+Wire Notes Line
+	4650 2050 4650 3150
+Wire Notes Line
+	4650 700  4650 1700
 $EndSCHEMATC
