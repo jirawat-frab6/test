@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 136)
+    (start_pass_no 279)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -26,14 +26,10 @@
     )
   )
   (rule
-    (width 250.0)
+    (width 750.0)
     (clear 250.2)
-    (clear 125.0 (type smd_to_turn_gap))
-    (clear 400.2 (type default_"High_current"))
+    (clear 375.0 (type smd_to_turn_gap))
     (clear 62.6 (type smd_smd))
-    (clear 400.2 (type smd_"High_current"))
-    (clear 400.2 (type "kicad_default"_"High_current"))
-    (clear 400.2 (type "High_current"_"High_current"))
   )
   (padstack "Via[0-1]_600:400_um"
     (shape
@@ -66,7 +62,7 @@
     (clearance_class default)
     (via_rule default)
     (rule
-      (width 250.0)
+      (width 750.0)
     )
     (circuit 
       (use_layer F.Cu B.Cu)
@@ -75,30 +71,30 @@
   (class "kicad_default"
     "Net-(CN7-Pad1)" "Net-(CN7-Pad2)" "Net-(CN7-Pad3)" "Net-(CN7-Pad4)" "Net-(CN7-Pad5)" "Net-(CN7-Pad6)" "Net-(CN7-Pad7)" "Net-(CN7-Pad8)"
     "Net-(CN7-Pad9)" "Net-(CN7-Pad10)" "Net-(CN7-Pad11)" "Net-(CN7-Pad12)" "Net-(CN7-Pad13)" "Net-(CN7-Pad14)" "Net-(CN7-Pad15)" "Net-(CN7-Pad17)"
-    "Net-(CN7-Pad19)" "Net-(CN7-Pad21)" "Net-(CN7-Pad23)" "Net-(CN7-Pad24)" "Net-(CN7-Pad25)" "Net-(CN7-Pad26)" "Net-(CN7-Pad27)" "Net-(CN7-Pad28)"
-    "Net-(CN7-Pad29)" "Net-(CN7-Pad30)" "Net-(CN7-Pad31)" "Net-(CN7-Pad32)" "Net-(CN7-Pad33)" "Net-(CN7-Pad34)" "Net-(CN7-Pad35)" "Net-(CN7-Pad36)"
-    "Net-(CN7-Pad37)" "Net-(CN7-Pad38)" "Net-(CN10-Pad3)" "Net-(CN10-Pad4)" "Net-(CN10-Pad5)" "Net-(CN10-Pad6)" "Net-(CN10-Pad7)" "Net-(CN10-Pad8)"
-    "Net-(CN10-Pad9)" "Net-(CN10-Pad10)" "Net-(CN10-Pad11)" "Net-(CN10-Pad12)" "Net-(CN10-Pad14)" "Net-(CN10-Pad15)" "Net-(CN10-Pad16)" "Net-(CN10-Pad17)"
-    "Net-(CN10-Pad18)" "Net-(CN10-Pad19)" "Net-(CN10-Pad20)" "Net-(CN10-Pad22)" "Net-(CN10-Pad24)" "Net-(CN10-Pad25)" "Net-(CN10-Pad26)" "Net-(CN10-Pad27)"
-    "Net-(CN10-Pad28)" "Net-(CN10-Pad29)" "Net-(CN10-Pad30)" "Net-(CN10-Pad31)" "Net-(CN10-Pad32)" "Net-(CN10-Pad33)" "Net-(CN10-Pad34)" "Net-(CN10-Pad35)"
-    "Net-(CN10-Pad36)" "Net-(CN10-Pad37)" "Net-(CN10-Pad38)" +5V "/enc_a" "/enc_b" "Net-(CN7-Pad20)" +3V3
-    "/motro_pwm" "/motor_ina" "/motor_inb" "Net-(U2-Pad15)" "Net-(U2-Pad14)" "Net-(U2-Pad13)" "Net-(U2-Pad12)" "Net-(U2-Pad11)"
-    "Net-(U2-Pad10)" "Net-(U2-Pad1)"
+    "Net-(CN7-Pad19)" "Net-(CN7-Pad21)" "Net-(CN7-Pad23)" "Net-(CN7-Pad25)" "Net-(CN7-Pad26)" "Net-(CN7-Pad27)" "Net-(CN7-Pad28)" "Net-(CN7-Pad29)"
+    "Net-(CN7-Pad30)" "Net-(CN7-Pad31)" "Net-(CN7-Pad32)" "Net-(CN7-Pad33)" "Net-(CN7-Pad34)" "Net-(CN7-Pad35)" "Net-(CN7-Pad36)" "Net-(CN7-Pad37)"
+    "Net-(CN7-Pad38)" "Net-(CN10-Pad4)" "Net-(CN10-Pad6)" "Net-(CN10-Pad7)" "Net-(CN10-Pad8)" "Net-(CN10-Pad9)" "Net-(CN10-Pad10)" "Net-(CN10-Pad11)"
+    "Net-(CN10-Pad12)" "Net-(CN10-Pad14)" "Net-(CN10-Pad16)" "Net-(CN10-Pad17)" "Net-(CN10-Pad18)" "Net-(CN10-Pad20)" "Net-(CN10-Pad22)" "Net-(CN10-Pad24)"
+    "Net-(CN10-Pad25)" "Net-(CN10-Pad26)" "Net-(CN10-Pad27)" "Net-(CN10-Pad28)" "Net-(CN10-Pad29)" "Net-(CN10-Pad30)" "Net-(CN10-Pad31)" "Net-(CN10-Pad32)"
+    "Net-(CN10-Pad33)" "Net-(CN10-Pad34)" "Net-(CN10-Pad35)" "Net-(CN10-Pad36)" "Net-(CN10-Pad37)" "Net-(CN10-Pad38)" +5V "/enc_a"
+    "/enc_b" "Net-(CN7-Pad20)" +3V3 "Net-(U2-Pad14)" "Net-(U2-Pad13)" "Net-(U2-Pad12)" "Net-(U2-Pad11)" "Net-(U2-Pad10)"
+    "Net-(CN7-Pad18)" "Net-(CN7-Pad16)" "/limit_switch" "/motor_pwm2" "/motor_pwm1" "/I2C_SDA" "/I2C_SCL" "Net-(CN10-Pad2)"
+    "Net-(CN10-Pad1)" "Net-(D1-Pad1)" "Net-(D3-Pad2)" "Net-(D5-Pad2)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
-      (width 250.0)
+      (width 750.0)
     )
     (circuit 
       (use_layer F.Cu B.Cu)
     )
   )
   (class "High_current"
-    GND "Net-(J2-Pad2)" "Net-(J2-Pad1)" +12V
+    GND +12V
     (clearance_class "High_current")
     (via_rule High_current)
     (rule
-      (width 1000.0)
+      (width 750.0)
     )
     (circuit 
       (use_layer F.Cu B.Cu)
